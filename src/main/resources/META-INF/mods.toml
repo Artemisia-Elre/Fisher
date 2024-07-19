@@ -1,0 +1,28 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+#issueTrackerURL = ""
+license = "GUN V3"
+
+[[mods]]
+modId = "fisher"
+version = "1.1"
+displayName = "Fisher"
+authors = "Artemisia , Huaranyue"
+description = '''
+    You can use it get better fishing
+'''
+#logoFile = ""
+
+[[dependencies.fisher]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.fisher]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"

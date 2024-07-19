@@ -1,0 +1,20 @@
+{
+  "attribute.name.fishing.power": "Fishing Power",
+  "attribute.name.fishing.line.length": "Fishing Line Length",
+  "attribute.name.fishing.rate": "Fishing Rate",
+  "message.line.too.long" : "The line cannot be overstretched",
+  "message.open.water" : "This is not open water, and you will not be able to fish for high-level items",
+  "message.reload.susses" : "Reload Susses!",
+  "message.fishing.item" : "You will fish out the %s rarity is %s -> Now Odds %s - Rate %s",
+  "message.tie.rod.failed" : "Tie Rod Failed!",
+  "message.number.upper.limit" : "The number of pull-rods exceeds the upper limit",
+  "message.in.water": "You cant Fishing in the water!",
+  "message.fish.onland": "The fish are on land!",
+  "rarity.junk" : "junk",
+  "rarity.common" : "common",
+  "rarity.rare" : "rare",
+  "rarity.legendary" : "legendary",
+  "rarity.mysterious" : "mysterious",
+  "rarity.exotica" : "exotica",
+  "message.no.such.loot": "Nothing Fished out"
+}

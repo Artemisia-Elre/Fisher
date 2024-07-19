@@ -1,0 +1,20 @@
+{
+  "attribute.name.fishing.line.length": "鱼线长度",
+  "attribute.name.fishing.power": "渔力",
+  "attribute.name.fishing.rate": "渔率",
+  "message.fish.onland": "鱼都跑上岸了!",
+  "message.fishing.item": "你将会钓上%s 品质为%s -> 当前成功几率%s - 暴击率%s",
+  "message.in.water": "你不能在水中钓鱼！",
+  "message.line.too.long": "鱼线无法过度拉伸",
+  "message.no.such.loot": "没有东西被钓起来",
+  "message.number.upper.limit": "拉杆次数超上限",
+  "message.open.water": "这并不是开放水域，将无法钓上高级物品",
+  "message.reload.susses": "重载完成",
+  "message.tie.rod.failed": "拉杆失败！",
+  "rarity.common": "普通",
+  "rarity.exotica": "奇异",
+  "rarity.junk": "垃圾",
+  "rarity.legendary": "传说",
+  "rarity.mysterious": "神秘",
+  "rarity.rare": "珍稀"
+}

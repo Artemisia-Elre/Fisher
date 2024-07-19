@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.artemisia.dev.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "refmap" : "mixins.fisher.refmap.json",
+  "mixins": [
+    "FishingMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
