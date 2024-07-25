@@ -5,10 +5,10 @@ import net.minecraft.network.chat.Component;
 
 public enum LootRarity {
     JUNK("junk","§8",3),
-    COMMON("common","§7",4),
-    RARE("rare","§9",6),
+    COMMON("common","§2",4),
+    RARE("rare","§5",6),
     LEGENDARY("legendary","§e",7),
-    EXOTICA("exotica","§d",5),
+    EXOTICA("exotica","§4",5),
     MYSTERIOUS("mysterious","§c",8);
     private final String name;
     private final String color;
