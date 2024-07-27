@@ -281,6 +281,9 @@ public abstract class FishingMixin extends Projectile {
                         player.awardStat(Stats.FISH_CAUGHT, 1);
                     }
                     fisher$bossBar.removePlayer((ServerPlayer) Objects.requireNonNull(getPlayerOwner()));
+                    if (fisher$loot.rarity() == LootRarity.LEGENDARY || fisher$loot.rarity() == LootRarity.MYSTERIOUS){
+                        PlayerUtils.sendServerMessage(Component.translatable("message.who.fishing.out", Objects.requireNonNull(getPlayerOwner()).getName().getString(),fisher$loot.rarity().toString()));
+                    }
                     this.discard();
                 } else{
                     if (fisher$cooldown >= FisherConfig.global.getCooldown()){
@@ -346,11 +349,9 @@ public abstract class FishingMixin extends Projectile {
                             || fisher$loot.rarity() == LootRarity.EXOTICA
                             || fisher$loot.rarity() == LootRarity.MYSTERIOUS
                     ){
-                        new PlayerUtils(getPlayerOwner()).sendTitle(Component.translatable("message.fishing.out.title",fisher$loot.rarity().toString()));
+                        new PlayerUtils(getPlayerOwner()).sendTitle(Component.literal(fisher$loot.id()),Component.literal(fisher$loot.rarity().toString()));
                     }
-                    if (fisher$loot.rarity() == LootRarity.LEGENDARY || fisher$loot.rarity() == LootRarity.MYSTERIOUS){
-                        PlayerUtils.sendServerMessage(Component.translatable("message.who.fishing.out", Objects.requireNonNull(getPlayerOwner()).getName().getString(),fisher$loot.rarity().toString()));
-                    }
+
                     try {
                         fisher$bossBar.setProgress(0);
                         fisher$bossBar.setName(Component.translatable("message.fishing.item", fisher$itemstack.getDisplayName().getString(), fisher$loot.rarity().toString(), (int) (fisher$tieRodOdds * 100) + "%", (int) (fisher$rate * 100) + "%"));

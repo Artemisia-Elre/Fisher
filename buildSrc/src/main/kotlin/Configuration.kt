@@ -14,6 +14,6 @@ const val mixin_version = "0.8.5"
 const val mapping_channel = "official"
 const val mapping_version = "1.20.1"
 
-const val mod_version = "1.1"
+const val mod_version = "1.2"
 const val mod_name = "fisher"
 const val mod_group = "net.artemisia.dev"

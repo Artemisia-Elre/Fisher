@@ -4,7 +4,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundSetActionBarTextPacket;
+import net.minecraft.network.protocol.game.ClientboundSetSubtitleTextPacket;
 import net.minecraft.network.protocol.game.ClientboundSetTitleTextPacket;
+import net.minecraft.network.protocol.game.ClientboundSetTitlesAnimationPacket;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
@@ -24,10 +26,13 @@ public class PlayerUtils {
         }
     }
 
-    public void sendTitle(Component text){
+    public void sendTitle(Component text,Component subtitle){
+
         ClientboundSetTitleTextPacket packet = new ClientboundSetTitleTextPacket(text);
+        ClientboundSetSubtitleTextPacket packet2 = new ClientboundSetSubtitleTextPacket(subtitle);
         try {
             ((ServerPlayer) player).connection.send(packet);
+            ((ServerPlayer) player).connection.send(packet2);
         }catch (Exception e) {
             e.printStackTrace();
         }
