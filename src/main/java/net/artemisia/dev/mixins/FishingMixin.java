@@ -5,6 +5,7 @@ import net.artemisia.dev.api.builder.ItemStackBuilder;
 import net.artemisia.dev.api.configuration.FisherConfig;
 import net.artemisia.dev.api.event.PlayerFishingEvent;
 import net.artemisia.dev.api.loot.TableSpawner;
+import net.artemisia.dev.api.loot.interfaces.loot.LootRarity;
 import net.artemisia.dev.api.loot.objects.loot.FishingLoot;
 import net.artemisia.dev.api.math.FMath;
 import net.artemisia.dev.api.math.Vec3Math;
@@ -332,11 +333,24 @@ public abstract class FishingMixin extends Projectile {
             this.biting = this.getEntityData().get(DATA_BITING);
             if (this.biting) {
                 TableSpawner spawner = new TableSpawner(new Random().nextDouble(),level(),level().getBiome(this.blockPosition()).get(),new AttributeUtils(getPlayerOwner()).getFishingPower());
+
                 fisher$loot = spawner.getLoot();
+
                 if (fisher$loot != null) {
                     this.fisher$tieRodOdds = FMath.getSuccessOdds(new AttributeUtils(getPlayerOwner()).getFishingPower(), fisher$loot.weight());
                     this.fisher$rate = FMath.getSuccessOddsRate(new AttributeUtils(getPlayerOwner()).getFishingPower(),fisher$loot.weight(),luck,new AttributeUtils(getPlayerOwner()).getFishingRate());
                     fisher$itemstack = new ItemStackBuilder(fisher$loot.item()).getStack();
+                    if (
+                            fisher$loot.rarity() == LootRarity.RARE
+                            || fisher$loot.rarity() == LootRarity.LEGENDARY
+                            || fisher$loot.rarity() == LootRarity.EXOTICA
+                            || fisher$loot.rarity() == LootRarity.MYSTERIOUS
+                    ){
+                        new PlayerUtils(getPlayerOwner()).sendTitle(Component.translatable("message.fishing.out.title",fisher$loot.rarity().toString()));
+                    }
+                    if (fisher$loot.rarity() == LootRarity.LEGENDARY || fisher$loot.rarity() == LootRarity.MYSTERIOUS){
+                        PlayerUtils.sendServerMessage(Component.translatable("message.who.fishing.out", Objects.requireNonNull(getPlayerOwner()).getName().getString(),fisher$loot.rarity().toString()));
+                    }
                     try {
                         fisher$bossBar.setProgress(0);
                         fisher$bossBar.setName(Component.translatable("message.fishing.item", fisher$itemstack.getDisplayName().getString(), fisher$loot.rarity().toString(), (int) (fisher$tieRodOdds * 100) + "%", (int) (fisher$rate * 100) + "%"));

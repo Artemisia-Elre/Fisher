@@ -4,6 +4,8 @@
   "attribute.name.fishing.rate": "渔率",
   "message.fish.onland": "鱼都跑上岸了!",
   "message.fishing.item": "你将会钓上%s 品质为%s -> 当前成功几率%s - 暴击率%s",
+  "message.who.fishing.out" : "[渔者] 玩家 %s 钓上了稀有度为 %s 物品",
+  "message.fishing.out.title": "你钓上来了一个 %s 品质的物品",
   "message.in.water": "你不能在水中钓鱼！",
   "message.line.too.long": "鱼线无法过度拉伸",
   "message.no.such.loot": "没有东西被钓起来",

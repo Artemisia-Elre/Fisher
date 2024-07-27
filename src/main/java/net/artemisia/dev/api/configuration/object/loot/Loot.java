@@ -3,18 +3,11 @@ package net.artemisia.dev.api.configuration.object.loot;
 import net.artemisia.dev.api.configuration.object.loot.item.LootItem;
 
 public class Loot {
-    private String type;
     private String id;
     private String rarity;
     private double weight;
     private LootItem item;
 
-    public String getType() {
-        return type;
-    }
-    public void setType(String type) {
-        this.type = type;
-    }
     public String getId() {
         return id;
     }

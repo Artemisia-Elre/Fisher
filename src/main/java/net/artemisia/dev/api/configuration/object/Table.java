@@ -4,21 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 public class Table {
-    private String type;
     private String id;
     private List<String> biome;
     private String rarity;
     private int power;
     private double probability;
     private Map<String, Double> loots;
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 
     public String getId() {
         return id;

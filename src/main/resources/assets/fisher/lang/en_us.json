@@ -7,6 +7,8 @@
   "message.reload.susses" : "Reload Susses!",
   "message.fishing.item" : "You will fish out the %s rarity is %s -> Now Odds %s - Rate %s",
   "message.tie.rod.failed" : "Tie Rod Failed!",
+  "message.fishing.out.title": "You fishing out the item that rarity is %s",
+  "message.who.fishing.out" : "[Fisher] The Player %s Fishing out the Item that rarity is %s",
   "message.number.upper.limit" : "The number of pull-rods exceeds the upper limit",
   "message.in.water": "You cant Fishing in the water!",
   "message.fish.onland": "The fish are on land!",

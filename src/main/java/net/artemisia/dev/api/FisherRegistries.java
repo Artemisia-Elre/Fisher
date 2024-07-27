@@ -8,6 +8,11 @@ import java.util.*;
 public class FisherRegistries {
     private static final Map<String, FishingLoot> loots = new HashMap<>();
     private static final Map<String, FishingTable> tables = new HashMap<>();
+    public static void clear(){
+        loots.clear();
+        tables.clear();
+    }
+
     public static void register(FishingLoot loot){
         for(String s : loots.keySet()){
             if (Objects.equals(s, loot.id())){

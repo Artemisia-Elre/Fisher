@@ -3,19 +3,26 @@ package net.artemisia.dev.api.configuration;
 public class Default {
     private double cooldown;
     private boolean displayBossBar;
+    private boolean BuildAnExample;
     private double IncreasesOfLeftMoveSpeed;
     private double IncreasesOfRightMoveSpeed;
     private boolean allowPlayerOverWater;
     private boolean allowFishOnLand;
-    public Default(double cooldown, boolean displayBossBar, double IncreasesOfLeftMoveSpeed, double IncreasesOfRightMoveSpeed,  boolean allowPlayerOverWater, boolean allowFishOnLand) {
+    public Default(double cooldown, boolean displayBossBar, double IncreasesOfLeftMoveSpeed, double IncreasesOfRightMoveSpeed,  boolean allowPlayerOverWater, boolean allowFishOnLand,boolean BuildAnExample) {
         this.cooldown = cooldown;
         this.displayBossBar = displayBossBar;
         this.IncreasesOfLeftMoveSpeed = IncreasesOfLeftMoveSpeed;
         this.IncreasesOfRightMoveSpeed = IncreasesOfRightMoveSpeed;
         this.allowPlayerOverWater = allowPlayerOverWater;
+        this.BuildAnExample = BuildAnExample;
         this.allowFishOnLand = allowFishOnLand;
     }
-
+    public boolean getBuildAnExample() {
+        return BuildAnExample;
+    }
+    public void setBuildAnExample(boolean BuildAnExample) {
+        this.BuildAnExample = BuildAnExample;
+    }
     public boolean getAllowFishOnLand() {
         return allowFishOnLand;
     }
